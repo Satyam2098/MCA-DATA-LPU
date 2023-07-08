@@ -1,0 +1,752 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Rent
+{
+    
+   public static final String ANSI_RESET = "\u001B[0m";
+        public static final String ANSI_GREEN = "\u001B[32m";
+        public static final String ANSI_YELLOW = "\u001B[33m";
+        public static final String ANSI_RED = "\u001B[31m";
+        public static final String ANSI_BLUE = "\u001B[34m";
+        public static final String ANSI_PURPLE = "\u001B[35m";
+        public static final String ANSI_CYAN = "\u001B[36m";
+        static void calculator()
+        {
+            int i;
+            Scanner sc3=new Scanner(System.in);
+           
+            System.out.println(ANSI_RED+"which vechicle you want"+ANSI_RESET);
+            System.out.println("\n1.Two wheeler\n2.Three wheeler\n3.Four wheeler");
+            int wheeler=sc3.nextInt();
+            System.out.print("\033[H\033[2J");
+            switch(wheeler)
+            {
+                case 1:
+                       System.out.println("choose two wheeler:");
+                       System.out.println(ANSI_YELLOW+"\n1.Hero"+ANSI_RESET);
+                       System.out.println(ANSI_BLUE+"\n2.Honda"+ANSI_RESET);
+                       System.out.println(ANSI_CYAN+"\n3.Yamaha"+ANSI_RESET);
+                       System.out.println(ANSI_GREEN+"\n4.Bajaj"+ANSI_RESET);
+                       System.out.println(ANSI_PURPLE+"\n5.Tvs"+ANSI_RESET);
+                       System.out.println(ANSI_RED+"\n6.Royal Enfield"+ANSI_RESET);
+                       System.out.println(ANSI_YELLOW+"\n7.KTM"+ANSI_RESET);
+                
+                       int bike=sc3.nextInt();
+                       System.out.print("\033[H\033[2J");
+                       if(bike==1)
+                       {
+                        System.out.print("\033[H\033[2J");
+                         System.out.println(ANSI_GREEN+"your selected Hero brand\n"+ANSI_RESET);
+                         System.out.println("select bike Brand Modal:");
+                        
+                         System.out.println("how many bikes you want");
+                           int nbikes=sc3.nextInt();
+                           int modal[]=new int[nbikes+1];
+                        System.out.println("select "+nbikes+" bikes:");
+                         System.out.println(ANSI_YELLOW+"\n1.Hero Splendor Plus\n2.Hero HF Deluxe\n3.Hero Xtreme 160R\n4.Hero Glamour\n5.Hero Xpulse 200 4V\n6.Hero Passion Pro\n7.Hero Pleasure +\n8.Hero Glamour Xtec\n9.Hero Maestro Edge 125\n10.Hero Xoom"+ANSI_RESET);
+                         for(i=1;i<=nbikes;i++)
+                         {
+                         System.out.println("enter "+i+" bikes");
+                         modal[i]=sc3.nextInt();
+                         }
+                         System.out.println("you want any special features(y/n)");
+                         char futures=sc3.next().charAt(0);
+                         System.out.print("\033[H\033[2J");
+                         if(futures=='y')
+                         {
+                             System.out.println("We will provide the special futures like carry bix & helment etc.");
+                             System.out.println("we charge the amount is:"+ANSI_GREEN+"05/day"+ANSI_RESET);
+                             System.out.println("Enter the Starting date:");
+                             String date=sc3.next();
+                             System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                             int redining=sc3.nextInt();
+                             System.out.println("Enter your Bike km"+ANSI_GREEN+"(After riding)"+ANSI_RESET);
+                             int redining1=sc3.nextInt();
+                             int total_ridining=redining1-redining;
+                             System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                             double gst=81.23;
+                             System.out.println("Enter how many days you use vichicle");
+                             int dates=sc3.nextInt();
+                             int total_futures=(dates*5);
+                             double t=(total_ridining*30)*nbikes;
+                             System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                             System.out.println("Total amont for riding:\t"+t);
+                             System.out.println("\t total gst:\t"+gst);
+                             System.out.println("Total features:\t\t"+total_futures+"\n");
+                              
+                             double total=t+gst+total_futures;
+                             System.out.println("\t\t------------------------\n");
+                             System.out.println("                      "+total);
+                             System.out.println("\t\t------------------------\n");
+
+
+                             
+                         }
+                         else
+                         {
+                            System.out.println("Enter the Starting date:");
+                             String date=sc3.next();
+                             System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                             double redining=sc3.nextDouble();
+                             System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                             double redining1=sc3.nextDouble();
+                             double total_ridining=redining1-redining;
+                             System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                             double gst=81.23;
+                             double t_ridining=(total_ridining*8)*nbikes;
+                             System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                             System.out.println("Total amont for riding:\t"+t_ridining);
+                             System.out.println("\t total gst:  \t"+gst);
+                             
+
+                             double total=t_ridining+gst;
+                             System.out.println("\t\t------------------------\n");
+                             System.out.println("                      "+total);
+                             System.out.println("\t\t------------------------\n");
+                         }
+
+                       }
+                         if(bike==2)
+                       {
+                        System.out.println(ANSI_BLUE+"your selected Honda brand\n"+ANSI_RESET);
+                        System.out.println("select the bike Brand Modal:");
+                        System.out.println("how many bikes you want");
+                        int nbikes=sc3.nextInt();
+                        int modal[]=new int[nbikes+1];
+                     System.out.println("select "+nbikes+" bikes:");
+                        System.out.println(ANSI_BLUE+"\n1.Honda Activa 5G\n2.Honda shine\n3.Honda Dio\n4.Honda Unicorn\n5.Honda Hornet\n6.Honda Livo\n7.Honda X-Blade\n8.Honda CB300F\n9.Honda CBR 650R\n10.Honda CB300R"+ANSI_RESET);
+                        for(i=1;i<=nbikes;i++)
+                         {
+                         System.out.println("enter "+i+" bikes");
+                         modal[i]=sc3.nextInt();
+                         }
+                         
+                        System.out.println("you want any special features(y/n)");
+                        char futures=sc3.next().charAt(0);
+                        System.out.print("\033[H\033[2J");
+                        if(futures=='y')
+                        {
+                            System.out.println("We will provide the special features like Luggage box & Helmet & air check camping tent  etc.");
+                            System.out.println("we charge the amount is:"+ANSI_GREEN+"05/day"+ANSI_RESET);
+                            System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            int redining=sc3.nextInt();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            int redining1=sc3.nextInt();
+                            int total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            System.out.println("Enter how many days you use vichicle");
+                            int dates=sc3.nextInt();
+                            int total_futures=(dates*5);
+                            double t=(total_ridining*30)*nbikes;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t);
+                            System.out.println("\t total gst:\t"+gst);
+                            System.out.println("Total features:\t\t"+total_futures+"\n");
+
+                            double total=t+gst+total_futures;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+
+
+                            
+                        }
+                        else
+                        {
+                           System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=(total_ridining*15)*nbikes;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                       }
+                       if(bike==3)
+                       {
+                        System.out.println(ANSI_CYAN+"your selected Yamaha brand\n"+ANSI_RESET);
+                        System.out.println("select the bike Brand Modal:");
+                        System.out.println("\nhow many bikes you want");
+                        int nbikes=sc3.nextInt();
+                        int modal[]=new int[nbikes+1];
+                     System.out.println("select "+nbikes+" bikes:");
+                        System.out.println(ANSI_CYAN+"\n1.Yamaha RX100\n2.YamahaR1 5\n3.Yamaha Auto MT\n4.Yamaha M15\n5.Yamaha FZ S\n6.Yamaha FZ 25\n7.Yamaha MT 09\n8.Yamaha R6\n9.Yamaha YZF R6\n10.Yamaha FZ x"+ANSI_RESET);
+                        for(i=1;i<=nbikes;i++)
+                         {
+                         System.out.println("enter "+i+" bikes");
+                         modal[i]=sc3.nextInt();
+                         }
+                        System.out.println("you want any special features(y/n)");
+                        char futures=sc3.next().charAt(0);
+                        System.out.print("\033[H\033[2J");
+                        if(futures=='y')
+                        {
+                            System.out.println("We will provide the special features like Luggage box & Helmet & air check camping tent  etc.");
+                            System.out.println("we charge the amount is:"+ANSI_GREEN+"05/day"+ANSI_RESET);
+                            System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            int redining=sc3.nextInt();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            int redining1=sc3.nextInt();
+                            int total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            System.out.println("Enter how many days you use vichicle");
+                            int dates=sc3.nextInt();
+                            int total_futures=(dates*5);
+                            double t=(total_ridining*17)*nbikes;
+                            System.out.println("****RS:17/km***");
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t);
+                            System.out.println("\t total gst:\t"+gst);
+                            System.out.println("Total features:\t\t"+total_futures+"\n");
+
+                            double total=t+gst+total_futures;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+
+
+                            
+                        }
+                        else
+                        {
+                           System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*8;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                       }
+                       if(bike==4)
+                       {
+                        System.out.println(ANSI_CYAN+"your selected Bajaj brand\n"+ANSI_RESET);
+                        System.out.println("select the bike Brand Modal:");
+                        System.out.println("\nhow many bikes you want");
+                        int nbikes=sc3.nextInt();
+                        int modal[]=new int[nbikes+1];
+                     System.out.println("select "+nbikes+" bikes:");
+                        System.out.println(ANSI_GREEN+"\n1.Bajaj Pulsar\n2.Bajaj Dominar\n3.Bajaj Pulsar125\n4.Bajaj CT 100\n5.Bajaj Platina\n6.Bajaj Discover\n7.Bajaj V15\n8.Bajaj Avenger Curise220\n9.Bajaj Chetak\n10.Bajaj Rouser NS"+ANSI_RESET);
+                        for(i=1;i<=nbikes;i++)
+                         {
+                         System.out.println("enter "+i+" bikes");
+                         modal[i]=sc3.nextInt();
+                         }
+                        System.out.println("you want any special features(y/n)");
+                        char futures=sc3.next().charAt(0);
+                        System.out.print("\033[H\033[2J");
+                        if(futures=='y')
+                        {
+                            System.out.println("We will provide the special features like Luggage box & Helmet & air check camping tent  etc.");
+                            System.out.println("we charge the amount is:"+ANSI_GREEN+"05/day"+ANSI_RESET);
+                            System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            int redining=sc3.nextInt();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            int redining1=sc3.nextInt();
+                            int total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            System.out.println("Enter how many days you use vichicle");
+                            int dates=sc3.nextInt();
+                            int total_futures=(dates*5);
+                            double t=(total_ridining*20)*nbikes;
+                            System.out.println("****RS:20/km***");
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t);
+                            System.out.println("\t total gst:\t"+gst);
+                            System.out.println("Total features:\t\t"+total_futures+"\n");
+
+                            double total=t+gst+total_futures;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+
+
+                            
+                        }
+                        else
+                        {
+                           System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                       }
+                       if(bike==6)
+                       {
+                        System.out.println(ANSI_CYAN+"your selected Royal Enfield brand\n"+ANSI_RESET);
+                        System.out.println("select the bike Brand Modal:");
+                        System.out.println("\nhow many bikes you want");
+                        int nbikes=sc3.nextInt();
+                        int modal[]=new int[nbikes+1];
+                     System.out.println("select "+nbikes+" bikes:");
+                        System.out.println(ANSI_RED+"\n1.Royal Enfield Hunter 350\n2.Royal Enfield Classic 350\n3.Royal Enfield Bullet 350\n4.Royal Enfield Continental GT 650\n5.Royal Enfield Himalayan\n6.Royal Enfield Interceptor 650\n7.Royal Enfield Meteor 350\n8.Royal Enfield Super Meteor 650\n9.Royal Enfield Scram 411"+ANSI_RESET);
+                        for(i=1;i<=nbikes;i++)
+                         {
+                         System.out.println("enter "+i+" bikes");
+                         modal[i]=sc3.nextInt();
+                         }
+                        System.out.println("you want any special features(y/n)");
+                        char futures=sc3.next().charAt(0);
+                        System.out.print("\033[H\033[2J");
+                        if(futures=='y')
+                        {
+                            System.out.println("We will provide the special features like Luggage box & Helmet & air check camping tent  etc.");
+                            System.out.println("we charge the amount is:"+ANSI_GREEN+"05/day"+ANSI_RESET);
+                            System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            int redining=sc3.nextInt();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            int redining1=sc3.nextInt();
+                            int total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            System.out.println("Enter how many days you use vichicle");
+                            int dates=sc3.nextInt();
+                            int total_futures=(dates*5);
+                            double t=(total_ridining*30)*nbikes;
+                            System.out.println("****RS:30/km***");
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t);
+                            System.out.println("\t total gst:\t"+gst);
+                            System.out.println("Total features:\t\t"+total_futures+"\n");
+
+                            double total=t+gst+total_futures;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+
+
+                            
+                        }
+                        else
+                        {
+                           System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Bike km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                       }
+                       if(bike==5)
+                       {
+                        System.out.println(ANSI_GREEN+"\t***********"+ANSI_RESET);
+                        System.out.println(ANSI_RED+"\tTVS bikes are not available in my Shop"+ANSI_RESET);
+                        System.out.print("\033[H\033[2J");
+                       }
+                       if(bike==7)
+                       {
+                        System.out.println(ANSI_GREEN+"\t**********"+ANSI_RESET);
+                        System.out.println(ANSI_RED+"\tKTM bikes are not available in my shop"+ANSI_RESET);
+                        System.out.print("\033[H\033[2J");
+                       }
+                       break;
+                       case 2:
+                       {
+                        System.out.println("choose the vehicle:");
+                        System.out.println(ANSI_YELLOW+"\n1.AUTO"+ANSI_RESET);
+                        System.out.println(ANSI_BLUE+"\n2.E-RIKSHA"+ANSI_RESET);
+                        int auto=sc3.nextInt();
+                        System.out.print("\033[H\033[2J");
+                        System.out.println("you selected"+auto+"vehicle");
+                        System.out.println("\nchoose the brand");
+                        System.out.println(ANSI_BLUE+"\n1.Bajaj"+ANSI_RESET);
+                       System.out.println(ANSI_CYAN+"\n2.Mahindra"+ANSI_RESET);
+                       System.out.println(ANSI_GREEN+"\n3.TVS"+ANSI_RESET);
+                       System.out.println(ANSI_PURPLE+"\n4.Piaggio"+ANSI_RESET);
+                        int brand=sc3.nextInt();
+                        System.out.print("\033[H\033[2J");
+                        
+                        if( brand==1)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many autos you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" Autos:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1.Bajaj Compact RE\n2.Bajaj Maxima Z\n3.Bajaj Maxima C\n4.Bajaj Maxima X Wide"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Auto");
+                             modals[i]=sc3.nextInt();
+                             }
+                             System.out.print("\033[H\033[2J");
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                         if( brand==2)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many autos you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" Autos:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1.Mahindra ME \n2.Mahindra ZE Z\n3.Mahindra LE C\n4.Mahindra SE"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Auto");
+                             modals[i]=sc3.nextInt();
+                             }
+                             
+                        System.out.print("\033[H\033[2J");
+                
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                        if( brand==3)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many autos you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" Autos:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1.TVS NEO \n2.TVS Metro Z\n3.TVS Special C\n4.TVS Spider"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Auto");
+                             modals[i]=sc3.nextInt();
+                             }
+                             
+                        System.out.print("\033[H\033[2J");
+                
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Auto km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+
+                       }
+                       case 3:
+                       {
+                        System.out.println("Choose the Four Wheeler vehicle:");
+                        System.out.println(ANSI_YELLOW+"\n1.Four Wheeler"+ANSI_RESET);
+                        int auto=sc3.nextInt();
+                        System.out.print("\033[H\033[2J");
+                        System.out.println("you selected"+auto+"vehicle");
+                        System.out.println("\nchoose the brand");
+                        System.out.println(ANSI_BLUE+"\n1.Suzuki"+ANSI_RESET);
+                       System.out.println(ANSI_CYAN+"\n2.Mahindra"+ANSI_RESET);
+                       System.out.println(ANSI_GREEN+"\n3.Toyota"+ANSI_RESET);
+                        int brand=sc3.nextInt();
+                        System.out.print("\033[H\033[2J");
+                        
+                        if( brand==1)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many Cars you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" Cars:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1. Swift \n2. Alto \n3. Dezire \n4. Brezza"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Cars");
+                             modals[i]=sc3.nextInt();
+                             }
+                             
+                        System.out.print("\033[H\033[2J");
+                
+    
+                            
+                            //System.out.println(ANSI_RED+"\n1.Royal Enfield Hunter 350\n2.Royal Enfield Classic 350\n3.Royal Enfield Bullet 350\n4.Royal Enfield Continental GT 650\n5.Royal Enfield Himalayan\n6.Royal Enfield Interceptor 650\n7.Royal Enfield Meteor 350\n8.Royal Enfield Super Meteor 650\n9.Royal Enfield Scram 411"+ANSI_RESET);
+                            
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your car km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Car km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                         if( brand==2)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many cars you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" cars:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1.Mahindra Scorpio \n2.Mahindra XUv700 Z\n3.Mahindra Thar C\n4.Mahindra Bolero"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Cars");
+                             modals[i]=sc3.nextInt();
+                             }
+                             
+                        System.out.print("\033[H\033[2J");
+                
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your Car km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your Car km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+                        if( brand==3)
+                        {
+                            System.out.println("you selected"+brand+"brand");
+                            System.out.println("\nhow many  Cars you want");
+                            int autos=sc3.nextInt();
+                            int modals[]=new int[autos+1];
+                         System.out.println("select "+autos+" Cars:");
+                        System.out.println("\nselect the modal");
+                        System.out.println(ANSI_BLUE+"\n1.Toyota Innova \n2. Toyota Fortuner\n3. Toyota Etios C\n4.Toyota Glanza"+ANSI_RESET);
+                        for(i=1;i<=autos;i++)
+                             {
+                             System.out.println("enter "+i+" Car");
+                             modals[i]=sc3.nextInt();
+                             }
+                             
+                        System.out.print("\033[H\033[2J");
+                
+                             System.out.println("Enter the Starting date:");
+                            String date=sc3.next();
+                            System.out.println("Enter your car km"+ANSI_GREEN+"(Before riding)"+ANSI_RESET);
+                            double redining=sc3.nextDouble();
+                            System.out.println("Enter your car km"+ANSI_GREEN+"(Ater riding)"+ANSI_RESET);
+                            double redining1=sc3.nextDouble();
+                            double total_ridining=redining1-redining;
+                            System.out.println(ANSI_GREEN+"your total riding(in km):"+ANSI_RESET+total_ridining);
+                            double gst=81.23;
+                            double t_ridining=total_ridining*20;
+                            System.out.println(ANSI_GREEN+"your BILL IS:\n"+ANSI_RESET);
+                            System.out.println("Total amont for riding:\t"+t_ridining);
+                            System.out.println("\t total gst:\t"+gst);
+                            
+
+                            double total=t_ridining+gst;
+                            System.out.println("\t\t------------------------\n");
+                            System.out.println("                      "+total);
+                            System.out.println("\t\t------------------------\n");
+                        }
+
+                       }
+                       
+            }
+            
+
+        }
+    public static void main(String args[])
+    {
+        
+        int n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("\t\t**********************");
+        System.out.println(ANSI_RED+"\t\t\tWELCOME TO THE VECHILE RENT SYSTEM"+ANSI_RESET);
+        System.out.println("\t\t**********************");
+        System.out.println(ANSI_PURPLE+"\t\t\tstarts  your journey from here\n"+ANSI_RESET);
+        System.out.println("\t\t**********************");
+        System.out.println("enter your choice");
+        System.out.println("\n1.Register\n2.Login");
+         n=sc.nextInt();
+         System.out.print("\033[H\033[2J");
+        if(n==1)
+        {
+            Scanner sc1=new Scanner(System.in);
+            System.out.println("Enter the First name:");
+            String fname=sc1.nextLine();
+            System.out.println("Enter the Last  name:");
+            String lname=sc1.nextLine();
+            System.out.println("enter your phone number");
+            String phno=sc1.nextLine();
+            System.out.println("enter your address");
+            String address=sc1.nextLine();
+            System.out.println("Do you want to continue(y/n)");
+            char ch=sc1.next().charAt(0);
+            System.out.print("\033[H\033[2J");
+            if(ch=='y')
+            {
+            calculator();
+            }
+            else
+            {
+                System.out.println("your succesfully Register:");
+                System.out.println("Do you want to book a vihicle(y/n)");
+                char a=sc1.next().charAt(0);
+                System.out.print("\033[H\033[2J");
+                if(a=='y')
+                {
+                    calculator();
+                }
+            
+            
+            
+            }
+        }    
+        else
+        {
+            Scanner sc2=new Scanner(System.in);
+            System.out.println(ANSI_YELLOW+"*******LOGIN FORM********\n"+ANSI_RESET);
+            System.out.println(ANSI_RED+"*******WELCOME TO VICHECLE RENT COMPANY********\n"+ANSI_RESET);
+            System.out.println("Enter your user name:");
+            String uname=sc2.nextLine();
+            System.out.println("enter your password:");
+            String password=sc2.nextLine();
+            System.out.println("Do you continue(y/n)");
+            char ch1=sc2.next().charAt(0);
+            System.out.print("\033[H\033[2J");//clear screen
+            if(ch1=='y')
+            {
+                calculator();
+            }
+            else
+            {
+                System.out.println("your succesfully Login:");
+                System.out.println("Do you want to book a vihicle(y/n)");
+                char a=sc2.next().charAt(0);
+                System.out.print("\033[H\033[2J");
+                if(a=='y')
+                {
+                    calculator();
+                }
+
+            }
+        }
+        
+           
+    }   
+        
+    
+
+}
