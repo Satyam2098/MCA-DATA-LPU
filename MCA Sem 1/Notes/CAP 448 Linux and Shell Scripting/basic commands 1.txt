@@ -1,0 +1,23 @@
+date  // to display the current date
+who  // to provide details about currently loggined user
+whoami //to display the currently logined user name
+man //to provide manual
+clear // to clear commands from terminal
+pwd  // to show present working directory
+cal   cal 2028  cal 11 2023  // to display calendar
+uptime  //uptime of system
+df  //show disk usage
+du  //show directory space usage
+free  //show memory and swap usage
+passwd / to set/reset password
+ls   ls -a   ls -l   ls -al   //to show content of files and directories
+cat hello.txt //to view content of file
+touch //to create empty file
+rm //to remove file or directory
+cd     cd ..    //to change directory
+grep pattern filename   //to search for a pattern in a file
+gedit   //to edit the file graphically
+mkdir  //to create a directory
+rmdir  //to del empty dir
+cp     //cp source  destination      to copy a file
+mv    //to move the file from one location to another

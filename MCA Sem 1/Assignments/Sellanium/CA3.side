@@ -1,0 +1,248 @@
+{
+  "id": "b26243b4-298b-4a96-aa7e-966e56508cc8",
+  "version": "2.0",
+  "name": "CA3",
+  "url": "http://cup.edu.in",
+  "tests": [{
+    "id": "927699e3-e969-4a34-b22b-5796d561dbfc",
+    "name": "About",
+    "commands": [{
+      "id": "aea7d640-9b09-442b-8418-1a6b33f7b70c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f785dfbb-04b2-4e31-b945-516b8b64a89e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5c75cc0-64d1-4c91-83a7-3ce6359b453a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3049)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2333590-fc8e-4f3a-a1ce-cff9864d2681",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=CUP Profile",
+      "targets": [
+        ["linkText=CUP Profile", "linkText"],
+        ["css=.menu-item:nth-child(1) .menu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'CUP Profile')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about_1')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'CUP Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a8a4a34-20ed-4c52-abc4-b1af088106b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=CUP Profile",
+      "targets": [
+        ["linkText=CUP Profile", "linkText"],
+        ["css=.menu-item:nth-child(1) .menu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'CUP Profile')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about_1')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'CUP Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c77fe1d1-d8f3-4d06-b20f-a9ff5c73d25e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=CUP Profile",
+      "targets": [
+        ["linkText=CUP Profile", "linkText"],
+        ["css=.menu-item:nth-child(1) .menu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'CUP Profile')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about_1')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'CUP Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7435a384-396b-48ce-b1e0-3506c577ddad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Vision, Mission & Logo",
+      "targets": [
+        ["linkText=Vision, Mission & Logo", "linkText"],
+        ["css=.menu-item--active-trail .menu-item:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Vision, Mission & Logo')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/vision-mission-logo')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Vision, Mission & Logo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08c765fe-50ff-439b-97aa-ae0b972bcd92",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "01a4f3fb-7e38-4dab-9045-d4f03a49e90b",
+    "name": "Administration",
+    "commands": [{
+      "id": "dba98926-0229-454d-9495-ffdbe55d931f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dadc0570-a746-42a7-beb9-79413d283ca8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62fe32ea-1984-4e04-a685-965f8d590292",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Visitor",
+      "targets": [
+        ["linkText=Visitor", "linkText"],
+        ["css=.menu-item:nth-child(2) > .menu > .menu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Visitor')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/president.php')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Visitor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ddb4f98-2dc6-4208-9250-3cf175b598c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Vice Chancellor",
+      "targets": [
+        ["linkText=Vice Chancellor", "linkText"],
+        ["css=.menu-item--active-trail > .menu > .menu-item:nth-child(3) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Vice Chancellor')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/vice_chancellor.php')])[2]", "xpath:href"],
+        ["xpath=//li[2]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f90c0982-d53c-4cbb-974d-c20043c53c73",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5dce7742-86ae-4d37-9425-d03fbfe2b1b1",
+    "name": "Academics",
+    "commands": [{
+      "id": "7cf9051b-452a-46b2-a585-3cd346b46e2d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d29b7767-e7a0-47da-a89d-afb799b95b2e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb17e90-3b62-49c3-8628-448e7dc5baf7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Academic Calendar",
+      "targets": [
+        ["linkText=Academic Calendar", "linkText"],
+        ["css=.menu-item:nth-child(3) .menu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Academic Calendar')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[3]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/academic_calendar.php')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Academic Calendar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eaef8e9-fa23-4d99-82d7-d6759d41fd8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Programmes Offered",
+      "targets": [
+        ["linkText=Programmes Offered", "linkText"],
+        ["css=.menu-item--active-trail .menu-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Programmes Offered')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/programmes_offered.php')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Programmes Offered')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07296937-c792-49b6-85ce-2ccfcad5d4c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Syllabi",
+      "targets": [
+        ["linkText=Syllabi", "linkText"],
+        ["css=.menu-item--active-trail .menu-item:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Syllabi')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[3]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/syllabi.php')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Syllabi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "324e823e-58f0-4764-a43a-c52090561505",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Schools and Departments",
+      "targets": [
+        ["linkText=Schools and Departments", "linkText"],
+        ["css=.menu-item--active-trail .menu-item:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Schools and Departments')]", "xpath:link"],
+        ["xpath=//nav[@id='block-mainnavigation']/div/div/ul/li[3]/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/schools-and-departments.php')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Schools and Departments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dec4d25-0760-4269-8a4d-b2e4a9ffb3c4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "083e5acc-1a74-47f0-a30e-405def391d40",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["927699e3-e969-4a34-b22b-5796d561dbfc"]
+  }],
+  "urls": ["http://cup.edu.in/"],
+  "plugins": []
+}
